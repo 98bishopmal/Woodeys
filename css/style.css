@@ -27,7 +27,8 @@ h3,
 h4,
 .h4,
 .fw-medium {
-    font-weight: 600 !important;
+    font-weight: 100 !important;
+    font-size: 15px
 }
 
 h5,
@@ -215,7 +216,7 @@ h6,
 
 
 /*** Top Feature ***/
-@media (min-width: 991.98px) {
+@media (min-width: 800.98px) {
     .top-feature {
         position: relative;
         margin-top: -80px;
