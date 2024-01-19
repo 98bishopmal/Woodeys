@@ -109,7 +109,7 @@
                         function sendEmail() {
                             let name = document.getElementById("name").value;
                             let email = document.getElementById("email").value;
-                            let subject = document.getElementById("subject").value;
+                            let text = document.getElementById("subject").value;
                             let message = document.getElementById("message").value;
                             let finalmessage = `name : ${name} <br>  email : ${email} <br> subject : ${subject} <br>  Message : ${message} <br>`;
                             Email.send({
