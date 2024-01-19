@@ -7,7 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -124,10 +125,11 @@
                     <h1 class="display-5 mb-5">If You Have Any Query, Please Contact Us</h1>
                     <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
                     <form>
+                        <form action="#" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="email" class="form-control" id="name" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
@@ -150,10 +152,29 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-4" type="submit">Send Message</button>
+                                <button class="btn btn-primary py-3 px-4" type="submit" id="submit" onclick="sendEmail()">Send Message</button>
                             </div>
                         </div>
                     </form>
+                    <script>  
+                        function sendEmail() {
+                            let name = document.getElementById("name").value;
+                            let email = document.getElementById("email").value;
+                            let message = document.getElementById("message").value;
+                            let finalmessage = `name : ${name} <br>  email : ${email} <br>  Message : ${message} <br>`;
+                            Email.send({
+                                Host : "mail.smtp2go.com",
+                                Username : "malcolm@thebishops2010.co.uk",
+                                Password : "YWs5ZTdob243ODAw",
+                                To : 'malcolm@thebishops2010.co.uk',
+                                From : "woodeys@thebishops2010.co.uk",
+                                Subject : "Mail from website",
+                                Body : finalmessage
+                            }).then(
+                              message => alert(message)
+                            );
+                        }
+                        </script>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 450px;">
                     <div class="position-relative rounded overflow-hidden h-100">
@@ -167,7 +188,6 @@
         </div>
     </div>
     <!-- Contact End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
