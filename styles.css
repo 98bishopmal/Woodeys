@@ -91,20 +91,25 @@ figure {
     margin-top: 10px; /* Optional margin for spacing */
     font-weight: bold;
   }
-
+  figcaption2 {
+    margin-top: 10px; /* Optional margin for spacing */
+    font-weight: bold;
+  }
   .aboutpictures {
     display: flex;
-    gap: 20px; /* Adds space between figures */
-    justify-content: center; /* Centers items horizontally */
-    flex-wrap: wrap; /* Ensures items wrap to new lines */
+    flex-wrap: wrap; /* Wrap items to fit smaller screens */
+    gap: 20px; /* Space between items */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+}
+
+.aboutpictures figure {
+    width: calc(25% - 20px); /* Three columns for desktop */
 }
 
 .aboutpictures img {
-    width: calc(33.33% - 20px); /* Three images per row */
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover; /* Maintain aspect ratio */
-    flex-wrap: wrap; /* Ensures items wrap to new lines */
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .gallery {
