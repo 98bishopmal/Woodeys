@@ -156,6 +156,7 @@ header {
 @media (max-width: 768px) {
     .aboutpictures figure {
         width: calc(25% - 20px); /* One images per row on tablets */
+        justify-content: center;
     }
 }
 @media (max-width: 480px) {
