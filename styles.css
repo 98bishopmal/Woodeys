@@ -106,7 +106,7 @@ footer {
 
 
 header {
-        font-size: x-large; /* Reduce font size for smaller screens */
+        font-size: large; /* Reduce font size for smaller screens */
         padding: 10px; /*Adjust padding as needed*/ 
         }
 }
