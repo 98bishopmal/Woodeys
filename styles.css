@@ -150,6 +150,6 @@ header {
 }
 @media (max-width: 480px) {
     .gallery figure {
-        width: calc(100% - 20px); /* One image per row on mobile devices */
+        width: calc(50% - 20px); /* One image per row on mobile devices */
     }
 }
