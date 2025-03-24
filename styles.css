@@ -9,7 +9,10 @@ body {
 h1 {
     font-weight: bold;
 }
-
+h2 {
+    text-align: center;
+    font-size: xx-large;
+}
 p {
     font-size: 1.2rem; /* Adjusted for readability */
     color: white;
@@ -72,6 +75,38 @@ main {
 }
 
 /* Gallery Styles */
+
+figure {
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  figcaption {
+    margin-top: 10px; /* Optional margin for spacing */
+    font-weight: bold;
+  }
+  figcaption2 {
+    
+  }
+.aboutpictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap items to fit smaller screens */
+    gap: 10px; /* Space between items */
+}
+
+.aboutpictures figure {
+    width: calc(20% - 10px); /* Three columns for desktop */
+    justify-content: center;
+}
+
+.aboutpictures img {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+    justify-content: center;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap; /* Wrap items to fit smaller screens */
