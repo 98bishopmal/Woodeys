@@ -73,7 +73,7 @@ nav ul li a {
 main {
     padding: 20px;
     background-image: url("https://98bishopmal.github.io/Woodeys/images/bg-img.jpg");
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
