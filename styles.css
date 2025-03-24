@@ -8,6 +8,7 @@ body {
     background-color: #ffffff;
     background-image: https://github.com/98bishopmal/Woodeys/blob/main/images/banner.jpg;
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     color: black;
     padding: 15px;
