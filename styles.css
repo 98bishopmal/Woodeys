@@ -6,7 +6,7 @@ body {
   
   header {
     background-color: #ffffff;
-    background-image: https://98bishopmal.github.io/Woodeys/images/banner.jpg;
+    background-image: url("https://98bishopmal.github.io/Woodeys/images/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
