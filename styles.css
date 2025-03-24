@@ -1,16 +1,22 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;     
+    padding: 0;
+    font-size: 1rem; /* Base font size */
 }
+
 h1 {
     font-weight: bold;
-  }
-  p {
-    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem; /* Adjusted for readability */
     color: white;
-  }
-  header {
+}
+
+/* Header Styles */
+header {
     background-color: #ffffff;
     background-image: url("https://98bishopmal.github.io/Woodeys/images/banner.jpg");
     background-size: cover;
@@ -21,60 +27,93 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: xx-large;
-  }
-  
-  nav ul {
+}
+
+/* Navigation Styles */
+nav ul {
     list-style-type: none;
-  }
-  
-  nav ul li {
-    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Inline items for desktop */
     margin-right: 15px;
-  }
+}
 
-    .contact-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007BFF; /* Blue color */
-      color: white;
-      text-decoration: none;
-      border-radius: 5px; /* Rounded corners */
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-    }
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Default link color */
+}
 
-    .contact-button:hover {
-      background-color: #0056b3; /* Darker blue on hover */
-    }
+.burger-menu {
+    display: none; /* Hidden by default */
+}
 
-  .contact-button:hover {
+/* Button Styles */
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
-  }
+}
 
-  main {
+/* Main Content Styles */
+main {
     padding: 20px;
-  }
-  
-  .gallery {
+}
+
+/* Gallery Styles */
+.gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .gallery figure {
-    width: calc(33.333% - 20px);
-  }
-  
-  .gallery img {
+    flex-wrap: wrap; /* Wrap items to fit smaller screens */
+    gap: 20px; /* Space between items */
+}
+
+.gallery figure {
+    width: calc(33.333% - 20px); /* Three columns for desktop */
+}
+
+.gallery img {
     width: 100%;
-    border-radius: 8px;
-  }
-  
-  footer {
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Footer Styles */
+footer {
     text-align: center;
     padding: 10px;
     background-color: #ffffff;
-    color: white;
-  }
+}
+
+/* Responsive Design - Mobile Optimization */
+@media (max-width: 600px) {
+    
+    body {
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+        line-height: 1.6; /* Improve readability on smaller screens */
+        margin-bottom: 20px; /* Add spacing at the bottom of the page */
+        overflow-x:hidden
+      }
+
+    
   
+  
+
+header {
+        padding-top:-30%;
+        padding-left:-40%;
+        padding-left:-40%;
+        padding-right:-40%;
+        padding-bottom:-40%;
+        padding-top:-40%    
+        }
+}
