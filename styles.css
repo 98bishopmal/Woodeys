@@ -153,7 +153,11 @@ header {
         width: calc(50% - 20px); /* Two images per row on tablets */
     }
 }
-
+@media (max-width: 768px) {
+    .aboutpictures figure {
+        width: calc(25% - 20px); /* One images per row on tablets */
+    }
+}
 @media (max-width: 480px) {
     .gallery figure {
         width: calc(100% - 20px); /* One image per row on mobile devices */
