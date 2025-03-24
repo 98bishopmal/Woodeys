@@ -161,3 +161,17 @@ header {
         gap: 10px; /* Adjust spacing for smaller screens */
     }
 }
+
+@media (max-width: 640px) {
+    .aboutpictures img {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .aboutpictures {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
