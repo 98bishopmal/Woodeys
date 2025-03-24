@@ -149,7 +149,8 @@ header {
     }
 }
 @media (max-width: 480px) {
-    .gallery figure {
-        width: calc(50% - 20px); /* One image per row on mobile devices */
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Two images per row on mobile */
+      gap: 10px; /* Adjust spacing for smaller screens */
     }
 }
