@@ -17,7 +17,11 @@ p {
     font-size: 1.2rem; /* Adjusted for readability */
     color: white;
 }
-
+p2 {
+    font-size: 1.2rem; /* Adjusted for readability */
+    color: black;
+    text-align: center;
+}
 /* Header Styles */
 header {
     background-color: #ffffff;
@@ -91,24 +95,15 @@ figure {
     font-weight: bold;
   }
   figcaption2 {
-    
+    display: table;
+    margin: 0 auto;
+    text-align: center;
   }
-.aboutpictures {
+  .aboutpictures {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Wrap items to fit smaller screens */
-    gap: 10px; /* Space between items */
-}
-
-.aboutpictures figure {
-    width: calc(20% - 10px); /* Three columns for desktop */
-    justify-content: center;
-}
-
-.aboutpictures img {
-    width: 100%;
-    border-radius: 8px; /* Rounded corners for images */
-    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 20px; /* Adds space between figures */
+    justify-content: center; /* Centers items horizontally */
 }
 
 .gallery {
@@ -151,12 +146,6 @@ header {
 @media (max-width: 768px) {
     .gallery figure {
         width: calc(50% - 20px); /* Two images per row on tablets */
-    }
-}
-@media (max-width: 768px) {
-    .aboutpictures figure {
-        width: calc(25% - 20px); /* One images per row on tablets */
-        justify-content: center;
     }
 }
 @media (max-width: 480px) {
