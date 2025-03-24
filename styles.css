@@ -79,7 +79,7 @@ main {
 }
 
 .gallery figure {
-    width: calc(33.333% - 20px); /* Three columns for desktop */
+    width: calc(25% - 20px); /* Three columns for desktop */
 }
 
 .gallery img {
@@ -104,9 +104,19 @@ footer {
         overflow-x:hidden
       }
 
-
 header {
         font-size: large; /* Reduce font size for smaller screens */
         padding: 10px; /*Adjust padding as needed*/ 
         }
+}
+@media (max-width: 768px) {
+    .gallery figure {
+        width: calc(50% - 20px); /* Two images per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery figure {
+        width: calc(100% - 20px); /* One image per row on mobile devices */
+    }
 }
