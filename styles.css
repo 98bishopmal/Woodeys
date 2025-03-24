@@ -75,11 +75,12 @@ nav ul li a {
 
 /* Main Content Styles */
 main {
-    padding: 20px;
+    padding: 10px;
     background-image: url("https://98bishopmal.github.io/Woodeys/images/bg-img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    justify-content: center;
 }
 
 /* Gallery Styles */
@@ -94,16 +95,18 @@ figure {
     margin-top: 10px; /* Optional margin for spacing */
     font-weight: bold;
   }
-  figcaption2 {
-    display: table;
-    margin: 0 auto;
-    text-align: center;
-  }
+
   .aboutpictures {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     gap: 20px; /* Adds space between figures */
     justify-content: center; /* Centers items horizontally */
+}
+
+.aboutpictures img {
+    width: calc(33.33% - 20px); /* Three images per row */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
 .gallery {
@@ -145,11 +148,13 @@ header {
         padding: 10px; /*Adjust padding as needed*/ 
         }
 }
+
 @media (max-width: 768px) {
     .gallery figure {
         width: calc(50% - 20px); /* Two images per row on tablets */
     }
 }
+
 @media (max-width: 480px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr); /* Two images per row on mobile */
