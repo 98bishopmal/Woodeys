@@ -110,6 +110,7 @@ figure {
     display: flex;
     flex-wrap: wrap; /* Wrap items to fit smaller screens */
     gap: 20px; /* Space between items */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
 }
 
 .gallery figure {
@@ -119,6 +120,7 @@ figure {
 .gallery img {
     width: 100%;
     border-radius: 8px; /* Rounded corners for images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Footer Styles */
@@ -150,7 +152,7 @@ header {
 }
 @media (max-width: 480px) {
     .gallery {
-      grid-template-columns: repeat(2, 1fr); /* Two images per row on mobile */
-      gap: 10px; /* Adjust spacing for smaller screens */
+        grid-template-columns: repeat(2, 1fr); /* Two images per row on mobile */
+        gap: 10px; /* Adjust spacing for smaller screens */
     }
 }
