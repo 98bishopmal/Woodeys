@@ -1,7 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0;     
+}
+h1 {
+    font-weight: bold;
   }
   
   header {
@@ -10,8 +13,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: black;
-    padding: 15px;
+    color: white;
+    padding: 300px;
     text-align: center;
   }
   
