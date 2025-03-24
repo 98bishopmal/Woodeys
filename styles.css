@@ -104,16 +104,9 @@ footer {
         overflow-x:hidden
       }
 
-    
-  
-  
 
 header {
-        padding-top:-30%;
-        padding-left:-40%;
-        padding-left:-40%;
-        padding-right:-40%;
-        padding-bottom:-40%;
-        padding-top:-40%    
+        font-size: x-large; /* Reduce font size for smaller screens */
+        padding: 50px; /*Adjust padding as needed*/ 
         }
 }
