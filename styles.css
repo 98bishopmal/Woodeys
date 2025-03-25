@@ -90,22 +90,35 @@ portfolio {
 /* Gallery Styles */
 figure {
     display: table; /* Center content horizontally */
-    margin: 0 auto; 
+    margin: auto;
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
 }
 
 figcaption {
     margin-top: 10px; /* Optional margin for spacing */
     font-weight: bold;
+    text-align: center;
 }
 
-.aboutpictures,
+.aboutpictures,{
+    display: flex; 
+    flex-wrap: wrap; /* Wrap items to fit smaller screens */
+    gap: 20px; /* Space between items */
+}
+
 .gallery {
     display: flex; 
     flex-wrap: wrap; /* Wrap items to fit smaller screens */
     gap: 20px; /* Space between items */
 }
 
-.aboutpictures img,
+.aboutpictures img,{
+    width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
 .gallery img {
     width: 100%;
     border-radius: 8px; /* Rounded corners for images */
