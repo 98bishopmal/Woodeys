@@ -84,11 +84,7 @@ main {
 
 /* Portfolio Section Styles */
 portfolio {
-    padding: 10px;
-    background-image: url("https://98bishopmal.github.io/Woodeys/images/bannerbottom.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
 }
 
 /* Gallery Styles */
@@ -113,6 +109,10 @@ figcaption {
 }
 
 .gallery {
+    background-image: url("https://98bishopmal.github.io/Woodeys/images/bannerbottom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex; 
     flex-wrap: wrap; /* Wrap items to fit smaller screens */
     gap: 20px; /* Space between items */
