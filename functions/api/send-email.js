@@ -1,7 +1,10 @@
 export const onRequestPost = async ({ request }) => {
   try {
-    const formData = await request.json(); // Parse JSON data from the form submission
-    const { name, email, phone, message } = formData;
+    const formData = await request.formData();
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const message = formData.get("message");
 
     // Prepare SMTP2GO API payload
     const smtpPayload = {
