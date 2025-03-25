@@ -1,11 +1,12 @@
 export const onRequestPost = async ({ request }) => {
   try {
+    // Parse the form data (application/x-www-form-urlencoded)
     const formData = await request.formData();
     const name = formData.get("name");
     const email = formData.get("email");
     const phone = formData.get("phone");
     const message = formData.get("message");
-
+    
     // Prepare SMTP2GO API payload
     const smtpPayload = {
       api_key: "api-7ADDC3FFF91E4AE8886DCC5BB9DD4276", // Replace with your SMTP2GO API key
