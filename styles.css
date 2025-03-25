@@ -85,6 +85,10 @@ main {
 /* Portfolio Section Styles */
 portfolio {
     padding: 10px;
+    background-image: url("https://98bishopmal.github.io/Woodeys/images/bannerbottom.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Gallery Styles */
