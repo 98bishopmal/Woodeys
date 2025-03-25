@@ -25,17 +25,23 @@ export const onRequestPost = async ({ request }) => {
     });
 
     if (response.ok) {
-      const result = await response.json();
-      alert(result.message); // Inform the user of success
-
-      // Redirect to another page after successful submission
-      window.location.href = "/index.html"; // Replace with your desired URL
+      return new Response(JSON.stringify({ success: true, message: "Email sent successfully!" }), {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      });
     } else {
-      const error = await response.json();
-      alert(`Error: ${error.message}`); // Handle errors
+      const errorData = await response.json();
+      console.error("SMTP2GO Error Response:", errorData);
+      return new Response(JSON.stringify({ success: false, message: "Failed to send email." }), {
+        headers: { "Content-Type": "application/json" },
+        status: 500,
+      });
     }
-  } catch (err) {
-    console.error("Error submitting the form:", err);
-    alert("An error occurred while submitting the form.");
+  } catch (error) {
+    console.error("Error handling form submission:", error);
+    return new Response(JSON.stringify({ success: false, message: "An error occurred." }), {
+      headers: { "Content-Type": "application/json" },
+      status: 500,
+    });
   }
 };
