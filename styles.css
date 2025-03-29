@@ -180,7 +180,9 @@ button:hover {
         }
     
   
-   .gallery figure,
+   .gallery figure{
+      width:auto%;
+   }
    .aboutpictures figure{
       width:auto%;
     }
