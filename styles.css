@@ -104,8 +104,8 @@ figcaption {
 
 .aboutpictures {
     display: flex;
-    flex-wrap: wrap; /* Wrap items to fit smaller screens */
-    gap: 20px; /* Space between items */
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Space between images */
 }
 
 .gallery {
@@ -119,13 +119,17 @@ figcaption {
 }
 
 .aboutpictures img {
-    width: 100%;
-    border-radius: 8px; /* Rounded corners for images */
+    width: 200px; /* Full width of the container */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images fill the box while maintaining aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 8px; /* Rounded corners for images */
+    width: 200px; /* Full width of the container */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images fill the box while maintaining aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
 }
 
 /* Footer Styles */
