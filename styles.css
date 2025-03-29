@@ -102,8 +102,8 @@ figcaption {
     text-align: center;
 }
 
-.aboutpictures,{
-    display: flex; 
+.aboutpictures {
+    display: flex;
     flex-wrap: wrap; /* Wrap items to fit smaller screens */
     gap: 20px; /* Space between items */
 }
@@ -118,7 +118,7 @@ figcaption {
     gap: 20px; /* Space between items */
 }
 
-.aboutpictures img,{
+.aboutpictures img {
     width: 100%;
     border-radius: 8px; /* Rounded corners for images */
 }
@@ -178,7 +178,8 @@ button:hover {
   
    .gallery figure,
    .aboutpictures figure{
-      width:auto%;}
+      width:auto%;
+    }
     
    
 }
