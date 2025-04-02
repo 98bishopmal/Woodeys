@@ -9,7 +9,14 @@ window.onscroll = function() {
     backToTopBtn.style.display = "none";
   }
 };
-
+function scrollFunction() {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop > 20) {
+      mybutton.style.display = "block";
+  } else {
+      mybutton.style.display = "none";
+  }
+}
 // Scroll to the top when clicking the button
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
