@@ -9,12 +9,14 @@ export const onRequestPost = async ({ request, env }) => {
 
     // Access hidden API key from environment variables
     const apiKey = env.SMTP2GO_API_KEY;
+    const sender = env.SENDER;
+    const sendto = env.SENDTO;
 
     // Prepare SMTP2GO API payload
     const smtpPayload = {
       api_key: apiKey,
-      sender: "website@woodeystrees.co.uk",
-      to: ["malcolm@thebishops2010.co.uk"],
+      sender: sender,
+      to: [sendto],
       subject: `New message from ${name}`,
       text_body: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`,
       reply_to: email,
