@@ -187,32 +187,6 @@ button:hover {
       width:auto%;
     }
     
-   
-}
-
-@media only screen and (max-width: 768px) {
-    #backToTopBtn {
-        display: block !important; /* Force the button to display */
-    }
-}
-
-#backToTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 90%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
-    z-index: 99; /* Ensure it doesn't overlap other elements */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Padding for the button */
-    border-radius: 50px; /* Rounded corners */
-    font-size: 18px; /* Font size for the text */
-}
-
-#backTopTopBtn:hover {
-    background-color: #0056b3;
 }
   #backToHomeBtn {
     position: true; /* Fixed/sticky position */
