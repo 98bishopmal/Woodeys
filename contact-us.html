@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woodey's Trees & Gardens</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <header>
@@ -34,7 +35,9 @@
 
     <label for="message">Message:</label>
     <textarea id="message" name="message" required></textarea>
-
+ <!-- Turnstile Widget -->
+ <div class="cf-turnstile" 
+ data-sitekey="0x4AAAAAAAxnM9VBhD3oDExh"></div>
     <button type="submit">Send</button>
   </form>
   
@@ -45,7 +48,9 @@
 
       const form = event.target; // Get the form element
       const formData = new FormData(form); // Create a FormData object from the form
-
+      // Add Turnstile token to form data
+      const turnstileToken = form.querySelector('[name="cf-turnstile-response"]').value;
+      formData.append("cf-turnstile-response", turnstileToken);
       // Convert FormData to application/x-www-form-urlencoded format
       const urlEncodedData = new URLSearchParams(formData).toString();
 
@@ -78,7 +83,7 @@
 
   <button onclick="goToHome()" id="backToHomeBtn">Back to Home</button>
   <script src="scripts/backtohome.js"></script>
-  
+
   <footer>
     <p>&copy; 2025 Woodey's Trees & Gardens</p>
   </footer>
