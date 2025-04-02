@@ -6,10 +6,11 @@ export const onRequestPost = async ({ request }) => {
     const email = formData.get("email");
     const phone = formData.get("phone");
     const message = formData.get("message");
-
+    // Access the hidden API key from environment variables or secrets
+    const apiKey = env.API_KEY;
     // Prepare SMTP2GO payload
     const smtpPayload = {
-      api_key: "API_KEY", // Replace with valid API key
+      api_key: "apiKey", // Replace with valid API key
       sender: "malcolm@thebishops2010.co.uk", // Verified sender email
       to: ["malcolm@m1c.co.uk"], // Recipient emails
       subject: `New message from ${name}`,
