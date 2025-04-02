@@ -9,7 +9,7 @@ export const onRequestPost = async ({ request }) => {
 
     // Prepare SMTP2GO payload
     const smtpPayload = {
-      api_key: "api-7ADDC3FFF91E4AE8886DCC5BB9DD4276", // Replace with valid API key
+      api_key: "API_KEY", // Replace with valid API key
       sender: "malcolm@thebishops2010.co.uk", // Verified sender email
       to: ["malcolm@m1c.co.uk"], // Recipient emails
       subject: `New message from ${name}`,
