@@ -21,9 +21,6 @@
     </header>
 
 <main>
-  <button onclick="goToHome()" id="backToHomeBtn">Back to Home</button>
-  <script src="scripts/backtohome.js"></script>
-
   <!-- Contact Form -->
   <form id="contact-form">
     <label for="name">Name:</label>
@@ -41,6 +38,9 @@
     <button type="submit">Send</button>
   </form>
 
+  <button onclick="goToHome()" id="backToHomeBtn">Back to Home</button>
+  <script src="scripts/backtohome.js"></script>
+  
   <!-- Embedded JavaScript -->
   <script>
     document.querySelector("#contact-form").addEventListener("submit", async (event) => {
