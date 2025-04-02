@@ -1,4 +1,4 @@
-export const onRequestPost = async ({ request }) => {
+export const onRequestPost = async ({ request, env }) => {
   try {
     // Parse form data
     const formData = await request.formData();
@@ -6,13 +6,15 @@ export const onRequestPost = async ({ request }) => {
     const email = formData.get("email");
     const phone = formData.get("phone");
     const message = formData.get("message");
-    // Access the hidden API key from environment variables or secrets
-    const apiKey = env.API_KEY;
-    // Prepare SMTP2GO payload
+
+    // Access hidden API key from environment variables
+    const apiKey = env.SMTP2GO_API_KEY;
+
+    // Prepare SMTP2GO API payload
     const smtpPayload = {
-      api_key: "apiKey", // Replace with valid API key
-      sender: "malcolm@thebishops2010.co.uk", // Verified sender email
-      to: ["malcolm@m1c.co.uk"], // Recipient emails
+      api_key: apiKey,
+      sender: "website@woodeystrees.co.uk",
+      to: ["malcolm@thebishops2010.co.uk"],
       subject: `New message from ${name}`,
       text_body: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`,
       reply_to: email,
@@ -32,7 +34,7 @@ export const onRequestPost = async ({ request }) => {
       });
     } else {
       const errorData = await response.json();
-      console.error("SMTP2GO Error Response:", errorData);
+      console.error("SMTP2GO Error:", errorData);
       return new Response(JSON.stringify({ success: false, message: "Failed to send email." }), {
         headers: { "Content-Type": "application/json" },
         status: 500,
