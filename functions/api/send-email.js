@@ -30,6 +30,7 @@ export const onRequestPost = async ({ request, env }) => {
       });
     }
 
+    
     // Proceed with email logic if Turnstile validation succeeds
     // Prepare SMTP2GO API payload
     const smtpPayload = {
